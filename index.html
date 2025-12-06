@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayush | AI & Web Developer</title>
+  <meta name="description" content="Portfolio of Aayush - AI & Web Developer building futuristic web experiences and assistants like Ayra." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="ai">
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="logo-ring">
+          <div class="logo-inner">A</div>
+        </div>
+        <div class="logo-text">
+          <span>Aayush</span>
+          <span>AI • WEB • AUTOMATION</span>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle">
+          <span id="themeLabel">AUTO • AI</span>
+        </button>
+
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button class="nav-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+            Let’s build something →
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Building futuristic interfaces & assistants
+        </div>
+
+        <h1 class="hero-title glitch">
+          Hi, I’m <span>Aayush</span><br />
+          I craft AI-driven web experiences.
+        </h1>
+
+        <p class="hero-subtitle">
+          I’m a developer who loves mixing <strong>clean UI</strong> with
+          <strong>smart automation</strong>. Currently focused on
+          <span class="typing" id="typing"></span>
+        </p>
+
+        <div class="hero-tags">
+          <span class="hero-tag">AI Assistants (Ayra)</span>
+          <span class="hero-tag">Modern Web UIs</span>
+          <span class="hero-tag">Automation & APIs</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
+            View projects ↓
+          </button>
+          <!-- TODO: change href to resume link -->
+          <a class="btn-ghost" href="#" target="_blank" rel="noreferrer">
+            Download Resume
+          </a>
+        </div>
+
+        <p class="hero-note">
+          Auto theme: <span>Day → Light</span>, <span>Evening → Dark</span>, <span>Night → AI Neon</span>.
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-panel tilt">
+          <div class="hero-chip">● Online & exploring new projects</div>
+          <div class="hero-panel-content">
+            <div class="avatar-ring">
+              <div class="avatar-inner">
+                <span>🤖</span>
+              </div>
+            </div>
+
+            <div class="hero-name">Aayush</div>
+            <div class="hero-role">AI & Web Developer • Builder of Ayra</div>
+
+            <div class="hero-metrics">
+              <div class="metric-box">
+                <div class="metric-label">Projects</div>
+                <div class="metric-value">5+ mini</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">Focus</div>
+                <div class="metric-value">AI & Web</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">Location</div>
+                <div class="metric-value">India 🇮🇳</div>
+              </div>
+            </div>
+
+            <div class="hero-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+              <span>Flask / APIs</span>
+              <span>Git & GitHub</span>
+            </div>
+
+            <div class="terminal" id="terminal">
+              <div class="terminal-header">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+              <div class="terminal-body" id="terminalBody">
+                <!-- JS se auto lines add hongi -->
+              </div>
+            </div>
+
+            <div class="hud">
+              <div class="hud-item">
+                <div class="hud-label">Local Time</div>
+                <div class="hud-value" id="hudTime">--:--</div>
+              </div>
+              <div class="hud-item">
+                <div class="hud-label">Device</div>
+                <div class="hud-value" id="hudDevice">Detecting…</div>
+              </div>
+              <div class="hud-item">
+                <div class="hud-label">Mode</div>
+                <div class="hud-value" id="hudMode">AI Neon</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <p class="section-subtitle">A quick snapshot of who I am and what I like building.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-body">
+            <div class="about-text">
+              <p>
+                I’m Aayush, a self-taught developer who loves creating things that
+                actually solve problems – from <strong>AI assistants</strong> to
+                <strong>clean websites</strong> for small businesses.
+              </p>
+              <p>
+                I enjoy connecting UI with smart backends: APIs, automation scripts,
+                and AI models. Recently I’ve been focused on my personal assistant
+                <strong>“Ayra”</strong>, experimenting with voice control, WhatsApp
+                integration and desktop automation.
+              </p>
+            </div>
+            <ul class="about-list">
+              <li><span>Tech stack:</span> HTML, CSS, JavaScript, Python, Flask, APIs, Git</li>
+              <li><span>Learning:</span> React, better UI/UX, scalable deployments</li>
+              <li><span>Goal:</span> Build real-world AI-first products & work with great teams</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="about-text">
+              <p>Things I enjoy working on:</p>
+            </div>
+            <div class="chips">
+              <span class="chip">AI voice assistants</span>
+              <span class="chip">Portfolio & landing pages</span>
+              <span class="chip">Gym / fitness websites</span>
+              <span class="chip">Automation scripts</span>
+              <span class="chip">WhatsApp integrations</span>
+              <span class="chip">Tooling & utilities</span>
+            </div>
+            <div class="about-text" style="margin-top:1rem;">
+              <p>
+                If you need someone who can <strong>experiment fast</strong> and ship small MVPs quickly,
+                I’d be happy to collaborate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS + RADAR -->
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Technologies & tools I’ve been using.</p>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="skills-layout">
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>HTML & CSS</span>
+                  <span>Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="transform:scaleX(0.95);"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>JavaScript</span>
+                  <span>Learning</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="transform:scaleX(0.75);"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>Python & Flask</span>
+                  <span>Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="transform:scaleX(0.87);"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>APIs & AI integration</span>
+                  <span>Hands-on</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="transform:scaleX(0.8);"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>Git & GitHub</span>
+                  <span>Comfortable</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="transform:scaleX(0.8);"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>Problem solving</span>
+                  <span>Strong</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="transform:scaleX(0.9);"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="radar-card">
+              <div class="radar-title">AI profile snapshot</div>
+              <div class="radar-wrapper">
+                <svg viewBox="0 0 120 120" class="radar-svg">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(148,163,184,0.35)" stroke-width="0.5" />
+                  <circle cx="60" cy="60" r="35" fill="none" stroke="rgba(148,163,184,0.3)" stroke-width="0.5" />
+                  <circle cx="60" cy="60" r="20" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="0.5" />
+                  <!-- spider lines -->
+                  <line x1="60" y1="10" x2="60" y2="110" stroke="rgba(148,163,184,0.35)" stroke-width="0.5" />
+                  <line x1="13" y1="35" x2="107" y2="85" stroke="rgba(148,163,184,0.35)" stroke-width="0.5" />
+                  <line x1="13" y1="85" x2="107" y2="35" stroke="rgba(148,163,184,0.35)" stroke-width="0.5" />
+                  <!-- filled polygon (AI stats) -->
+                  <polygon
+                    points="60,18 95,50 78,96 42,96 25,55"
+                    fill="rgba(56,189,248,0.25)"
+                    stroke="rgba(56,189,248,0.9)"
+                    stroke-width="1"
+                  />
+                </svg>
+              </div>
+              <div class="radar-labels">
+                <span>AI & LLMs</span>
+                <span>Web UI</span>
+                <span>Automation</span>
+                <span>APIs</span>
+                <span>Dev basics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Some AI & web experiments I’ve worked on.</p>
+
+      <div class="projects-grid">
+        <article class="project-card tilt">
+          <span class="project-tag">Featured • AI</span>
+          <h3 class="project-title">AYRA – Desktop AI Assistant</h3>
+          <p class="project-desc">
+            A personal AI assistant that responds to voice, sends WhatsApp messages,
+            and controls apps on the PC using Python, APIs and automation.
+          </p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>Flask / APIs</span>
+            <span>Automation</span>
+          </div>
+          <div class="project-links">
+            <!-- TODO: replace with your repo link -->
+            <a href="#" target="_blank" rel="noreferrer">
+              GitHub repo →
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card tilt">
+          <span class="project-tag">Web • UI</span>
+          <h3 class="project-title">Aayush Fitness – Gym Landing Page</h3>
+          <p class="project-desc">
+            A clean, conversion-focused landing page concept for a local gym with
+            clear pricing, features and WhatsApp contact flow.
+          </p>
+          <div class="project-meta">
+            <span>HTML / CSS</span>
+            <span>Responsive</span>
+          </div>
+          <div class="project-links">
+            <!-- TODO: replace with live demo link -->
+            <a href="#" target="_blank" rel="noreferrer">
+              Live demo →
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card tilt">
+          <span class="project-tag">Tools</span>
+          <h3 class="project-title">Experiments & Utilities</h3>
+          <p class="project-desc">
+            Mini projects: calculators, small web apps, WhatsApp
+            test scripts and other experiments to learn new concepts.
+          </p>
+          <div class="project-meta">
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>Practice</span>
+          </div>
+          <div class="project-links">
+            <!-- TODO: replace with repo / list link -->
+            <a href="#" target="_blank" rel="noreferrer">
+              See collection →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Want to build something or just discuss an idea?</p>
+
+      <div class="contact-grid">
+        <div class="card">
+          <div class="card-body">
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <!-- CHANGE THIS -->
+                <span class="contact-value">ayraassistantai@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">WhatsApp</span>
+                <!-- CHANGE THIS -->
+                <span class="contact-value">+91-XXXXXXXXXX</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Based in</span>
+                <span class="contact-value">India</span>
+              </div>
+            </div>
+            <p style="font-size:0.82rem;color:var(--muted);margin-top:0.8rem;">
+              I’m open to freelance projects, collaborations, or just chatting
+              about AI assistants, automation and web development.
+            </p>
+            <div class="socials">
+              <!-- TODO: replace # with your real links -->
+              <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <form onsubmit="handleSubmit(event)">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Tell me a bit about your project..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary btn-submit">
+                Send message →
+              </button>
+              <p id="formStatus" style="font-size:0.75rem;color:var(--muted);margin-top:0.4rem;"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Aayush. Built with HTML, CSS, JS & a bit of AI energy.
+    </footer>
+  </main>
+
+  <!-- AYRA CHAT WIDGET -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div class="chat-title">
+        <span>Ayra • Mini Assistant</span>
+        <span>Ask about projects, skills, contact</span>
+      </div>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg msg-ai">
+        Hi, I’m Ayra. Want to check <strong>projects</strong>, <strong>skills</strong> or <strong>contact</strong> info?
+      </div>
+      <div class="chat-suggestions">
+        <button data-intent="projects">Show projects</button>
+        <button data-intent="skills">Show skills</button>
+        <button data-intent="contact">Contact options</button>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type: projects / skills / contact…" />
+      <button id="chatSend">Send</button>
+    </div>
+  </div>
+
+  <button class="chat-toggle" id="chatToggle" aria-label="Open Ayra chat">
+    🤖
+  </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
